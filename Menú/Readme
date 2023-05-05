@@ -1,0 +1,4 @@
+Aquest programa consisteix en un menú on has d'escriure un número per seleccionar una de les diferents opcions (crear un rectangle amb asteriscs, saber si és un any de traspàs, multiplicar i acabar el programa).
+Després, et dirà que posis el necessari per completar l'exercici.
+
+Aquest programa està fet en Python i pot servir d'exemple per crear menús amb funcions i exercicis automàtics.
