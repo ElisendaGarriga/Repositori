@@ -1,0 +1,22 @@
+nota1 = float(input("Escriu la nota del primer parcial: "))
+nota2 = float(input("Escriu la nota del segon parcial: "))
+nota3 = float(input("Escriu la nota de les pràctiques: "))
+per1 = int(input("Escriu el percentatge que val el primer parcial: "))
+per2 = int(input("Escriu el percentatge que val el segon parcial: "))
+per3 = int(input("Escriu el percentatge que valen les pràctiques: "))
+if per1 + per2 + per3 == 100:
+    if nota3 >= 5:
+        total = (nota1 *(per1/100)) + (nota2 *(per2/100)) + (nota3 *(per3/100))
+        print(f"Nota final: {total}")
+        if total < 5:
+            print("Suspès")
+        elif total >= 5 and total < 7:
+            print("Aprovat")
+        elif total >= 7 or total < 9:
+            print("Notable")
+        elif total >= 9 or total <= 10:
+            print("Excel·lent")
+    else:
+        print(f"Suspès per les pràctiques (nota: {nota3})")
+else:
+    print("El percentage total no suma 100.")
