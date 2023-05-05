@@ -1,0 +1,49 @@
+def menu():
+    print("\nMenú principal:")
+    print("1. Exercici 1.")
+    print("2. Exercici 2.")
+    print("3. Exercici 3.")
+    print("4. Sortir.")
+
+def rectangle(Resultat, amplada, alçada):
+    for i in range(1,alçada+1):
+        Resultat = Resultat + "* " * amplada + "\n"
+    return Resultat
+
+def any(num):
+    if ((num%100)%4 == 0) and (num%100 != 0) or ((num/100)%4 == 0):
+        return (f"L'any {num} sí que és un any de traspàs.")
+    else:
+        return (f"L'any {num} no és un any de traspàs.")
+
+def multi(var1, var2):
+    Resultat = var1 * var2
+    return Resultat
+
+def sortir():
+    print("Adéu, que tinguis un bon dia.")
+
+opcio = 0
+while opcio != 4:
+    menu()
+    opcio = int(input("Escriu el número del que vols fer: "))
+    if opcio > 0 and opcio < 5:
+        if opcio == 1:
+            res = ""
+            am = int(input("Amplada del rectangle: "))
+            al = int(input("Alçada del rectangle: "))
+            Final = rectangle(res, am, al)
+            print(Final)
+        elif opcio == 2:
+            numany = int(input("Escriu un any: "))
+            Final = any(numany)
+            print(Final)
+        elif opcio == 3:
+            num1 = float(input("Escriu un número: "))
+            num2 = float(input("Escriu un altre número: "))
+            Final = multi(num1, num2)
+            print(f"{num1} * {num2} = {Final}")
+        elif opcio == 4:
+            sortir()
+    else:
+        print("Valor no vàlid. Torna-ho a intentar.")
